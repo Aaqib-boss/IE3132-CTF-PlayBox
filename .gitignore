@@ -7,4 +7,4 @@ __pycache__/
 *.ova
 *.vdi
 disk_image/*.dd
-disk_image/*.raw
+disk_image/*.rawstage4-forensics/build/*.img
