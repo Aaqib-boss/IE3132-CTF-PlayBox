@@ -8,3 +8,5 @@ __pycache__/
 *.vdi
 disk_image/*.dd
 disk_image/*.rawstage4-forensics/build/*.img
+stage4-forensics/dist/*.zip
+stage4-forensics/dist/*.zip

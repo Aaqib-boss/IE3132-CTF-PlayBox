@@ -1,0 +1,14 @@
+﻿Stage 4 - Checksums
+
+Raw disk image (subjectc-raw.img):
+SHA256: A3674B599C603A73D0363DF6019A4318A89E910D59F5E4E9C57B17200995D817
+
+Compressed distribution file (subjectc-image.zip):
+SHA256: 91A3B40F996822EB52CA612C3E7A99A1471F222F8182B438B66D5E8B394C4F2A
+
+Participant instructions:
+1. Download subjectc-image.zip
+2. Verify SHA256 matches the zip hash above
+3. Extract to get subjectc-raw.img
+4. Verify extracted file's SHA256 matches the raw image hash above
+5. Load subjectc-raw.img into Autopsy or FTK Imager as a Disk Image / VM File data source
