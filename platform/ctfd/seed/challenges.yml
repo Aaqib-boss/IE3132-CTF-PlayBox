@@ -66,3 +66,53 @@ challenges:
       - { content: "Your own statement mentions another one. Statements carry attachments, so check how those are served too.", cost: 50 }
     requirements:
       prerequisites: ["Stage 2 - The Drop"]
+  - name: "Stage 4 - What Wiping Doesn't Erase"
+    category: "Forensics"
+    value: 300
+    type: standard
+    state: visible
+    description: |
+     Subject C's personal device was seized shortly after the leak. Nothing was wiped,
+     but the user clearly tried to keep one file out ofsight.
+
+     A forensic image of the device is attached. Examine it, recover what was hidden,
+     and submit the reference code from the recovery note.
+     You will need your answer from the previous case file.
+
+     Tools: a forensic viewer such as Autopsy or FTK Imager, and 7-Zip.
+     Flag format: CASE{...}
+    files:
+    - stages/stage4_forensics/dist/subjectc-image.zip
+    flags:
+    - type: static
+      content: "CASE{h1dden_str3am_ledger_4472}"
+      data: case_insensitive
+    hints:
+    - { content: "See hints.md #1", cost: 0 }
+    - { content: "See hints.md #2", cost: 30 }
+    - { content: "See hints.md #3", cost: 60 }
+    requirements:
+      prerequisites: ["Stage 3 - The Ledger Portal"]
+  - name: "Stage 5 - The Flaw in the Lock"
+    category: "Cryptography"  
+    value: 350
+    type: standard
+    state: visible
+    description: |
+      The archive recovered from Subject C's device contained one more file, encrypted
+      by whoever prepared it. The scheme is home-made, and home-made locks have flaws.
+
+      Break it, read the handler log, and submit the reference code it contains.
+      The log also tells you where to go next.
+
+      Flag format: CASE{...}
+    flags:
+      - type: static
+        content: "CASE{ledger_xor_cracked}"
+        data: case_insensitive    
+    hints:
+      - { content: "See hints.md #1", cost: 0 }
+      - { content: "See hints.md #2", cost: 35 }
+      - { content: "See hints.md #3", cost: 70 }
+    requirements:
+      prerequisites: ["Stage 4 - What Wiping Doesn't Erase"]  
