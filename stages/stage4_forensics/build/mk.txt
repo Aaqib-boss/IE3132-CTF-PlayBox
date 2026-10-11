@@ -1,0 +1,5 @@
+create vdisk file="C:\dev\IE3132-CTF-PlayBox\stage4-forensics\build\subjectc.vhd" maximum=256 type=fixed
+attach vdisk
+create partition primary
+format fs=ntfs quick label=SUBJECTC
+assign letter=R

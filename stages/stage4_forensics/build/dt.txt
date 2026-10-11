@@ -1,0 +1,2 @@
+select vdisk file="C:\dev\IE3132-CTF-PlayBox\stage4-forensics\build\subjectc.vhd"
+detach vdisk
