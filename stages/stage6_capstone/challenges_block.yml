@@ -1,0 +1,32 @@
+
+# Stage 6 challenge block - integrate into the main CTFd seed.
+# Confirm field compatibility with the platform owner.
+
+- name: "Stage 6 - Operation Silent Ledger"
+  category: "Linux/System Security"
+  value: 300
+  type: standard
+  state: visible
+  description: |
+    The investigation has reached its final stage.
+
+    Examine the internal evidence service, identify the
+    security weakness, and recover the final evidence.
+
+    Target: http://10.10.10.100:8080
+
+    Flag format: CASE{...}
+
+  flags:
+    - type: static
+      content: "STAGE6_FLAG_SET_PRIVATELY"
+      data: case_insensitive
+
+  hints:
+    - content: "Inspect the evidence service and its available functionality."
+    - content: "Investigate how the service handles uploaded files."
+    - content: "Examine the permissions and behavior of the log-checking utility."
+
+  requirements:
+    prerequisites:
+      - "Stage 5 - Cryptography"
