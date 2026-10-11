@@ -12,3 +12,5 @@ stage4-forensics/dist/*.zip
 stage4-forensics/dist/*.zip
 stages/stage4_forensics/build/*.img
 stages/stage4_forensics/build/*.vhd
+disk_image/*.raw
+orchestration/.webhook_state.json
