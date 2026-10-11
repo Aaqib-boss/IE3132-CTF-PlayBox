@@ -20,8 +20,8 @@
       data: case_insensitive
   hints:
     - { content: "See hints.md #1", cost: 0 }
-    - { content: "See hints.md #2", cost: 10 }
-    - { content: "See hints.md #3", cost: 15 }
+    - { content: "See hints.md #2", cost: 15 }
+    - { content: "See hints.md #3", cost: 30 }
   requirements:
     prerequisites: ["Stage 1 - The Quiet Poster"]
-  next: "Stage 3 - Web (IDOR)"
+  
