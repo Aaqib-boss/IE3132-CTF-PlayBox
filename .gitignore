@@ -8,3 +8,4 @@ __pycache__/
 *.vdi
 disk_image/*.dd
 disk_image/*.raw
+orchestration/.webhook_state.json
