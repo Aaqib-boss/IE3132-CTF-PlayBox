@@ -47,7 +47,7 @@ This performs:
   `logchecker` binary and retrieve the evidence log, which contains the
   final flag.
 
-**Flag format:** `CASE{blacktide_motive_confirmed}`
+**Flag format:** `CASE{...}` (specific value withheld to preserve the challenge)
 
 ## Reset / Recovery
 Restore the VM to its pre-exploit clean state:
