@@ -7,5 +7,10 @@ __pycache__/
 *.ova
 *.vdi
 disk_image/*.dd
+disk_image/*.rawstage4-forensics/build/*.img
+stage4-forensics/dist/*.zip
+stage4-forensics/dist/*.zip
+stages/stage4_forensics/build/*.img
+stages/stage4_forensics/build/*.vhd
 disk_image/*.raw
-stages/stage6_capstone/privesc/logchecker
+orchestration/.webhook_state.json
