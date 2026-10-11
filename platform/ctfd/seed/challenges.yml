@@ -8,9 +8,7 @@ challenges:
       An anonymous tip says someone in Meridian Freight's Finance team is quietly
       sitting on evidence of a hidden "silent ledger". The only trace is the
       company's internal staff forum (offline mirror attached).
-
       Identify the insider. Everything you need is inside the package - no internet required.
-
       Flag format: CASE{STAFFID_HUBCODE_forumhandle}   e.g. CASE{MFC0000_XXX00_username}
       Hub codes are written exactly as on the Locations page; the handle is lowercase.
     files:
@@ -23,7 +21,6 @@ challenges:
       - { content: "See hints.md #1", cost: 0 }
       - { content: "See hints.md #2", cost: 10 }
       - { content: "See hints.md #3", cost: 20 }
-
   - name: "Stage 2 - The Drop"
     category: "Networking"
     value: 150
@@ -32,10 +29,8 @@ challenges:
     description: |
       Security captured 90 seconds of traffic from the insider's workstation (10.20.4.17)
       on the morning of 14 March. Most of it is routine. One upload is not.
-
       Find it, recover what was sent, and submit the reference code it contains.
       You will need your answer from the previous case file.
-
       Flag format: CASE{...}
     files:
       - stages/stage2_networking/dist/silent_ledger_capture.pcap
@@ -49,3 +44,25 @@ challenges:
       - { content: "See hints.md #3", cost: 30 }
     requirements:
       prerequisites: ["Stage 1 - The Quiet Poster"]
+  - name: "Stage 3 - The Ledger Portal"
+    category: "Web"
+    value: 250
+    type: standard
+    state: visible
+    description: |
+      The insider's login worked on Meridian Freight's internal Ledger Portal.
+      Somewhere in it is the evidence file Compliance sent to the Audit Director.
+      Target: http://10.10.10.1:8082
+      Use only what the previous case files gave you. Submit the audit reference you find.
+      Flag format: CASE{...}
+    files: []
+    flags:
+      - type: static
+        content: "CASE{sh4dow_batch_idor_9103}"
+        data: case_insensitive
+    hints:
+      - { content: "You already hold a login. The last case file gave it to you.", cost: 0 }
+      - { content: "Open one of your own statements and look at the address bar. What happens if the number changes?", cost: 25 }
+      - { content: "Your own statement mentions another one. Statements carry attachments, so check how those are served too.", cost: 50 }
+    requirements:
+      prerequisites: ["Stage 2 - The Drop"]
